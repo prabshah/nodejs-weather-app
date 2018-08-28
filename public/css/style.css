@@ -1,0 +1,78 @@
+:root{
+  background:  #FFCFB3;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.header, .header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background: #262A33;
+  color: white;
+  font-family: 'Karla', sans-serif;
+
+}
+
+.header h1 {
+  text-align: center;
+  padding: 20px;
+}
+
+.clock {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+.input-form {
+  
+  padding: 50px;
+  text-align: center;
+  
+}
+
+.input-form input[type="text"] {
+  padding: 20px;
+  font-size: 1.5rem;
+  
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
+  border: transparent;
+  transition: box-shadow 300ms linear;
+}
+
+.input-form input[type="text"]:hover {
+  box-shadow: none;
+}
+
+.input-form input[type="submit"] {
+  padding: 25px 40px;
+  border: transparent;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
+
+}
+
+.input-form input[type="text"]::placeholder {
+  font-style: italic;
+}
+
+.fa {
+  font-size: 50px;
+}
+
+.weather-section{
+ border: 1px solid red;
+ font-family: 'Karla', sans-serif;
+ 
+}
+
+.display-card {
+  width: 20%;
+  background: white;
+  margin: 0 auto;
+  height: 200px;
+  padding: 20px;
+}
