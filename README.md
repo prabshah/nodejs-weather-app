@@ -13,15 +13,6 @@
     $ yarn/npm run start:dev
     ```
     
-3. Run the app locally in a _production_ mode.
-    ```
-    $ yarn/npm start
-    ```
-    
-4. The SQLite database is automatically created on the initial run. The application
-creates a `db` directory at the project root, and configures a database according to
-the environment - `dev.db` for development and `prod.db` for the production. 
-
 5. Checkout `http://localhost:3000` :D
 
 ## Approach
