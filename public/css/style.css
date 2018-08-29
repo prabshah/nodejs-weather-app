@@ -55,7 +55,7 @@
   text-align: center;
   padding: 20px;
   font-size: 3rem;
-  text-shadow: 0px 0px 5px rgba(0, 0, 0, .7);
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
 }
 
 .form-section {
@@ -160,15 +160,15 @@
   border-top-right-radius: 10px;
 }
 
-.city, 
+.city,
 .temp,
 .desc {
   margin: 0;
-  padding:0
+  padding: 0;
 }
 
 .city {
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
 }
 
 .temp {
@@ -204,7 +204,7 @@
 }
 
 .info-cards:first-of-type {
-  margin-left: 1.4rem;;
+  margin-left: 1.4rem;
 }
 
 .info-cards::before {
