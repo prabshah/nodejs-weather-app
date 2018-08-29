@@ -9,6 +9,29 @@
   color: white;
 }
 
+.home-icon, .clock{
+  position: absolute;
+  top: 5%;
+}
+
+.clock {
+  right: 5%;
+  width: 75px;
+  font-size: 20px;
+}
+
+.home-icon {
+  max-height: 50px;
+  left: 3%;
+  box-shadow: 0px 0px 10px white;
+  padding: 20px;
+  transition: box-shadow 300ms ease-in-out
+}
+
+.home-icon:hover {
+  box-shadow: 0px 0px 1px white;
+}
+
 .header,
 .header h1 {
   margin: 0;
@@ -18,20 +41,13 @@
 .header {
   color: white;
   font-family: "Karla", sans-serif;
+  margin-top: 100px;
 }
 
 .header h1 {
   text-align: center;
   padding: 20px;
   font-size: 3rem;
-}
-
-.clock {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  width: 75px;
-  font-size: 20px;
 }
 
 .form-section {
@@ -51,11 +67,12 @@
   max-height: 50px;
 }
 
-.input-form input[type="text"] {
+
+.input-form input[type="text"], #formSubmit {
   padding: 20px;
-  font-size: 1.5rem;
-  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  font-size: 1.2rem;
+  -webkit-box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
   border: transparent;
   -webkit-transition: -webkit-box-shadow 300ms linear;
   transition: -webkit-box-shadow 300ms linear;
@@ -64,16 +81,15 @@
   transition: box-shadow 300ms linear, -webkit-box-shadow 300ms linear;
 }
 
-.input-form input[type="text"]:hover {
+.input-form input[type="text"]:hover, #formSubmit:hover {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
-.input-form input[type="submit"] {
-  padding: 25px 40px;
-  border: transparent;
-  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+#formSubmit {
+  padding: 10px;
+  margin-left: 5px;
+  cursor: pointer;
 }
 
 .input-form input[type="text"]::-webkit-input-placeholder {
@@ -114,7 +130,8 @@
   -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
   text-align: center;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
 }
 
 .city {
@@ -148,6 +165,21 @@
   -o-transition: animate 300ms ease-in-out;
   transition: animate 300ms ease-in-out;
   color: white;
+  box-shadow: inset 0px 0px 5px white;
+  border-radius: 10px;
+}
+
+.info-cards::before {
+  content: "";
+  text-align: center;
+  top: 0;
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .info-cards p {
@@ -159,25 +191,20 @@
   font-size: 2rem;
   padding-top: 10px;
 }
+
 .info-cards:nth-child(1) {
   -webkit-animation: fadeIn 200ms linear 100ms;
-  animation: fadeIn 200ms linear 100ms;
+  animation: fadeIn 400ms linear 100ms;
 }
+
 .info-cards:nth-child(2) {
   -webkit-animation: fadeIn 200ms linear 150ms;
-  animation: fadeIn 200ms linear 150ms;
+  animation: fadeIn 500ms linear 150ms;
 }
+
 .info-cards:nth-child(3) {
   -webkit-animation: fadeIn 200ms linear 200ms;
-  animation: fadeIn 200ms linear 200ms;
-}
-.info-cards:before {
-  content: "Info";
-  text-align: center;
-  height: 50%;
-  width: 100%;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 600ms linear 200ms;
 }
 
 .error-message {
@@ -189,6 +216,16 @@
   -webkit-box-shadow: inset 1px 1px 50px #3876bd;
   box-shadow: inset 1px 1px 50px #3876bd;
 }
+
+.welcome-section {
+  margin-top: 1rem;;
+  text-align: center;
+  background: rgba(0, 0, 0, .4);
+  padding: 20px;
+  font-size: 1.3rem
+}
+
+
 
 @-webkit-keyframes fadeIn {
   0% {

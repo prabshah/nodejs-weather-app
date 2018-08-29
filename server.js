@@ -11,10 +11,10 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.set("view engine", "ejs");
 app.use(expressLayouts);
 app.use(express.static(__dirname, +"/public"));
 
+app.set("view engine", "ejs");
 app.set("layout", "layouts/default");
 
 app.get("/", (req, res) => {
@@ -33,16 +33,13 @@ app.get("/weather", (req, res) => {
   }`;
 
   request(url, function(err, response, body) {
-    if (err) {
-      return res.redirect("404");
-    }
+    if (err) return res.redirect("404");
 
     const weather = JSON.parse(body);
     console.log(weather);
 
-    if (weather.main == undefined) {
-      return res.redirect("404");
-    }
+    if (weather.main == undefined) return res.redirect("404");
+
     const tempKelvin = Math.round(weather.main.temp);
     const tempCelcius = tempConverter.toCelsius(tempKelvin);
     const minTempCelcius = tempConverter.toCelsius(weather.main.temp_min);
