@@ -33,8 +33,8 @@ app.get("/weather", (req, res) => {
   }`;
 
   request(url, function(err, response, body) {
+    console.log(err, response, body);
     if (err) return res.redirect("404");
-
     const weather = JSON.parse(body);
     console.log(weather);
 
