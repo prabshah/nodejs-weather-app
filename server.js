@@ -1,8 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const axios = require("axios");
 var expressLayouts = require("express-ejs-layouts");
-
 const request = require("request");
 const ejs = require("ejs");
 
@@ -13,21 +11,16 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
 app.set("view engine", "ejs");
 app.use(expressLayouts);
-
 app.use(express.static(__dirname, +"/public"));
+
 app.set("layout", "layouts/default");
 
 app.get("/", (req, res) => {
-  res.render("index", {
-    pageHeading: "Node-Express Weather App",
-    footerMessage: "Weather App by prabesh.shah31@gmail.com"
-  });
+  res.render("index");
 });
 
-//error get req
 app.get("/404", (req, res) => {
   res.render("404");
 });
@@ -43,33 +36,32 @@ app.get("/weather", (req, res) => {
     if (err) {
       return res.redirect("404");
     }
+
     const weather = JSON.parse(body);
     console.log(weather);
-    //console.log(weather);
+
     if (weather.main == undefined) {
       return res.redirect("404");
     }
     const tempKelvin = Math.round(weather.main.temp);
     const tempCelcius = tempConverter.toCelsius(tempKelvin);
+    const minTempCelcius = tempConverter.toCelsius(weather.main.temp_min);
+    const maxTempCelcius = tempConverter.toCelsius(weather.main.temp_max);
     const tempFahrenheit = tempConverter.toFahrenheit(tempCelcius);
     const place = weather.name;
     const iconCode = weather.weather[0].icon;
     const desc = weather.weather[0].description;
     const iconUrl = `http://openweathermap.org/img/w/${iconCode}.png`;
-    console.log("tempKelvin", tempKelvin);
-    console.log("tempCelcius", tempCelcius);
-    console.log("Fahrenheit", tempFahrenheit);
-    console.log("place", place);
-    console.log("icon code", iconCode);
-    console.log("iconUrl", iconUrl);
-    console.log("description", desc);
-    const weatherText = `It's ${tempCelcius} degrees in ${weather.name}!`;
+    const humidity = weather.main.humidity;
     const data = {
       tempCelcius,
       place,
       iconUrl,
       tempFahrenheit,
-      desc
+      desc,
+      humidity,
+      minTempCelcius,
+      maxTempCelcius
     };
     return res.render("weather", data);
   });

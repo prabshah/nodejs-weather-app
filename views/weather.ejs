@@ -1,8 +1,23 @@
-<div class="weather-section">
-  <div class="display-card">
-    <p>City: <%= place %> </p>
-    <%= tempCelcius %>&#8451; | <%= tempFahrenheit %>&#8457;
-    <img src="<%= iconUrl %>" alt="Weather icon">
-    <%= desc %>
-  </div>
+<div class="weather-display-section">
+  <section class="main-info-section">
+    <p class="city">City: <%= place %> </p>
+    <p class="desc"> <%= desc %> <img class="icon" src="<%= iconUrl %>" alt="Weather icon" height="50px"></p>
+    <p class="temp"><%= tempCelcius %>&#8451; | <%= tempFahrenheit %>&#8457;</p>
+    
+   
+  </section>
+  <section class="additional-info-section">
+    <section class="info-cards">
+      <p class="card-title">Humidity:</p>
+      <p class="card-value"> <%= humidity %></p>
+    </section>
+    <section class="info-cards">
+        <p class="card-title">Min Temp:</p>
+        <p class="card-value"> <%= minTempCelcius %> &#8451;</p>
+    </section>
+    <section class="info-cards">
+        <p class="card-title">Max Temp:</p>
+        <p class="card-value"> <%= maxTempCelcius %> &#8451;</p>
+    </section>
+  </section>
 </div>
