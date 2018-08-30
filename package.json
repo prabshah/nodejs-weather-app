@@ -11,8 +11,8 @@
     "start": "node server.js"
   },
   "keywords": [
-    "Node.js",
-    "Express.js",
+    "Node JS",
+    "Express JS",
     "JavaScript"
   ],
   "author": "Prabesh Shah",
