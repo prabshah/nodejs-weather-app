@@ -1,0 +1,47 @@
+const express = require("express");
+const router = express.Router();
+const request = require("request");
+
+require("dotenv").config();
+const tempConverter = require("../helpers/tempConverter");
+
+const weatherApi = process.env.weatherApi;
+
+router.get("/", (req, res) => {
+  const city = req.query.city;
+  console.log(req.body, req.query);
+  const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${weatherApi}`;
+
+  request(url, function(err, response, body) {
+    console.log(err, response, body);
+    if (err) return res.redirect("404");
+    const weather = JSON.parse(body);
+    console.log(weather);
+
+    if (weather.main == undefined) return res.redirect("404");
+
+    const tempKelvin = Math.round(weather.main.temp);
+    const tempCelcius = tempConverter.toCelsius(tempKelvin);
+    const minTempCelcius = tempConverter.toCelsius(weather.main.temp_min);
+    const maxTempCelcius = tempConverter.toCelsius(weather.main.temp_max);
+    const tempFahrenheit = tempConverter.toFahrenheit(tempCelcius);
+    const place = weather.name;
+    const iconCode = weather.weather[0].icon;
+    const desc = weather.weather[0].description;
+    const iconUrl = `http://openweathermap.org/img/w/${iconCode}.png`;
+    const humidity = weather.main.humidity;
+    const data = {
+      tempCelcius,
+      place,
+      iconUrl,
+      tempFahrenheit,
+      desc,
+      humidity,
+      minTempCelcius,
+      maxTempCelcius
+    };
+    return res.render("weather", data);
+  });
+});
+
+module.exports = router;
