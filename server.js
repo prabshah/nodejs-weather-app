@@ -9,6 +9,7 @@ const tempConverter = require("./helpers/tempConverter");
 
 const app = express();
 
+const weatherApi = "09b24da1e0a717371cbf564329e8a449";
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(expressLayouts);
@@ -28,9 +29,7 @@ app.get("/404", (req, res) => {
 app.get("/weather", (req, res) => {
   const city = req.query.city;
   console.log(req.body, req.query);
-  const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${
-    process.env.weatherApi
-  }`;
+  const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${weatherApi}`;
 
   request(url, function(err, response, body) {
     console.log(err, response, body);
