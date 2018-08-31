@@ -27,7 +27,7 @@ With this application, users can:
 The frontend serves as an interface with the user. I aimed to achieve a simple yet
 attracting and user-friendly design. I have used ejs templeting engine to to acheive the server-side rendering
 
-The backend makes use of a Node JS framwork, Express JS, to communicate with OpenWeatherApi to get the data 
+The backend uses Node JS, Express JS to create a server and uses 'request', a simple Node.js module  for http cal, to communicate with the OpenWeatherMap Api
 
 ### Future improvements
 I'd like to keep expanding this project to hone my existing skills, as well as
