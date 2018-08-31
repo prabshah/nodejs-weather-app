@@ -3,7 +3,7 @@ const weatherData = require("../helpers/weatherData");
 const weather = (req, res) => {
   const city = req.query.city;
   const weatherApi = process.env.weatherApi;
-  const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${weatherApi}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${weatherApi}`;
 
   request(url, function(err, response, body) {
     if (err) {

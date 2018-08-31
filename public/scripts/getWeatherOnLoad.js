@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
   if (window.navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       const apiKey = `09b24da1e0a717371cbf564329e8a449`;
-      const url = `http://api.openweathermap.org/data/2.5/weather?lat=${
+      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${
         position.coords.latitude
       }&lon=${position.coords.longitude}&appid=${apiKey}`;
 
