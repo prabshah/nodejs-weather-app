@@ -29,6 +29,12 @@ attracting and user-friendly design. I have used ejs templeting engine to acheiv
 
 The backend uses Node JS, Express JS to create a server and uses 'request', a simple Node.js module  for http call, to communicate with the OpenWeatherMap Api
 
+### Running Application URL
+ ```
+ https://young-lowlands-57584.herokuapp.com
+ ```    
+
+
 ### Future improvements
 I'd like to keep expanding this project to hone my existing skills, as well as
 to explore new technologies.
