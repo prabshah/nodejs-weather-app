@@ -74,7 +74,7 @@
   display: -ms-flexbox;
   display: flex;
   max-height: 50px;
-  width: 70%;
+  width: 20%;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -83,7 +83,7 @@
 .input-form input[type="text"],
 #form-submit {
   padding: 20px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   -webkit-box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
   border: transparent;
