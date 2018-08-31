@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
           )}&#8451`;
           description.innerHTML = data.weather[0].description;
         })
-        .catch(err => window.location.replace(`/404`));
+        .catch(err => console.log(err));
     });
   }
 });
