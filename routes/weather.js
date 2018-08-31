@@ -1,10 +1,7 @@
 const request = require("request");
-
 const weatherData = require("../helpers/weatherData");
-
 const weather = (req, res) => {
   const city = req.query.city;
-
   const weatherApi = process.env.weatherApi;
   const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${weatherApi}`;
 
@@ -12,8 +9,8 @@ const weather = (req, res) => {
     if (err) {
       return res.redirect("404");
     }
-    const weather = JSON.parse(body);
 
+    const weather = JSON.parse(body);
     if (weather.main == undefined) {
       return res.redirect("404");
     }

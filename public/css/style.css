@@ -74,7 +74,7 @@
   display: -ms-flexbox;
   display: flex;
   max-height: 50px;
-  max-width: 70%;
+  width: 70%;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;

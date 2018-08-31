@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const component = results[0].address_components[ac];
             switch (component.types[0]) {
               case "locality":
-                const city = component.long_name;
+                const city = component.long_name || "London";
                 return window.location.replace(`/weather?city=${city}`);
             }
           }
