@@ -8,6 +8,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   };
 
-  const button = document.getElementById("formSubmit");
+  const button = document.getElementById("form-submit");
   button.addEventListener("click", sendFormData);
 });

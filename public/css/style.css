@@ -1,6 +1,6 @@
 :root {
-  background: #ffcfb3 url("../images/cloud_background.jpg") no-repeat center /
-    cover;
+  background: #ffcfb3 url("../images/cloud_background.jpg") no-repeat fixed
+    center / cover;
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -48,13 +48,14 @@
 .header {
   color: white;
   font-family: "Karla", sans-serif;
-  margin-top: 100px;
+  margin-top: 180px;
 }
 
 .header h1 {
   text-align: center;
   padding: 20px;
   font-size: 3rem;
+  margin-top: 3rem;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
 }
 
@@ -65,8 +66,7 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 20px;
-  margin-top: 30px;
+  padding: 20px 30px;
 }
 
 .input-form {
@@ -74,10 +74,14 @@
   display: -ms-flexbox;
   display: flex;
   max-height: 50px;
+  width: 80%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .input-form input[type="text"],
-#formSubmit {
+#form-submit {
   padding: 20px;
   font-size: 1.2rem;
   -webkit-box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
@@ -96,7 +100,7 @@
   box-shadow: none;
 }
 
-#formSubmit {
+#form-submit {
   padding: 10px;
   margin-left: 5px;
   cursor: pointer;
@@ -120,6 +124,7 @@
 
 .weather-display-section {
   font-family: "Karla", sans-serif;
+  padding-top: 10px;
   margin-top: 2rem;
   color: black;
   display: -webkit-box;
@@ -137,7 +142,8 @@
 
 .main-info-section {
   color: white;
-  padding: 20px;
+  padding: 30px 20px;
+  margin-bottom: 0.8rem;
   -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
   text-align: center;
@@ -186,6 +192,9 @@
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .info-cards {
@@ -280,5 +289,22 @@
 
   100% {
     opacity: 1;
+  }
+}
+
+/* Media Queries */
+@media screen and (max-width: 576px) {
+  .form-section {
+    padding: 10px 30px;
+  }
+
+  #form-submit {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .additional-info-section {
+    margin-top: 1rem;
   }
 }
