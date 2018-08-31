@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
       window.location.replace(`/weather?city=${city}`);
     }
   };
-
   const button = document.getElementById("form-submit");
   button.addEventListener("click", sendFormData);
 });
