@@ -90,8 +90,6 @@
 
 .input-form input[type="text"],
 #form-submit {
-  padding: 20px;
-  font-size: 1rem;
   -webkit-box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
   border: transparent;
@@ -102,16 +100,21 @@
   transition: box-shadow 300ms linear, -webkit-box-shadow 300ms linear;
 }
 
-.input-form input[type="text"]:hover,
-#formSubmit:hover {
-  -webkit-box-shadow: none;
-  box-shadow: none;
+.input-form input[type="text"] {
+  padding: 20px;
+  font-size: 1rem;
 }
 
 #form-submit {
   padding: 10px;
   margin-left: 5px;
   cursor: pointer;
+}
+
+.input-form input[type="text"]:hover,
+#formSubmit:hover {
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .input-form input[type="text"]::-webkit-input-placeholder {
