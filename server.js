@@ -5,7 +5,6 @@ const expressLayouts = require("express-ejs-layouts");
 
 const weather = require("./routes/weather");
 const status404 = require("./routes/404");
-const currentCity = require("./routes/currentCity");
 
 const app = express();
 
@@ -23,8 +22,6 @@ app.get("/", (req, res) => {
 
 app.get("/weather", weather);
 app.get("/404", status404);
-
-app.get("/currentCity", currentCity);
 
 const PORT = process.env.PORT || 3000;
 
