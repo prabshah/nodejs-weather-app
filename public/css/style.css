@@ -11,18 +11,19 @@
 
 .home-icon,
 .clock {
-  position: absolute;
-  top: 5%;
+  position: absolute; 
 }
 
 .clock {
-  right: 5%;
+  top: 10%;
   width: 75px;
   font-size: 20px;
+  left: 46%
 }
 
 .home-icon {
   max-height: 50px;
+  top: 5%;
   left: 3%;
   -webkit-box-shadow: 0px 0px 10px white;
   box-shadow: 0px 0px 10px white;
