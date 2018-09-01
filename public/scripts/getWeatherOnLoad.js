@@ -14,12 +14,14 @@ document.addEventListener("DOMContentLoaded", function() {
       fetch(url)
         .then(res => res.json())
         .then(data => {
-          currentCityText.innerHTML = "Current City";
-          city.innerHTML = data.name;
-          temperature.innerHTML = `${Math.round(
-            data.main.temp - 273.15
-          )}&#8451`;
-          description.innerHTML = data.weather[0].description;
+          if (data.cod === 200) {
+            currentCityText.innerHTML = "Current City";
+            city.innerHTML = data.name;
+            temperature.innerHTML = `${Math.round(
+              data.main.temp - 273.15
+            )}&#8451`;
+            description.innerHTML = data.weather[0].description;
+          } else return;
         })
         .catch(err => console.log(err));
     });
