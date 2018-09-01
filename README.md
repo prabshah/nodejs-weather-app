@@ -25,15 +25,11 @@ With this application, users can:
 
 ### Application architecture
 The frontend serves as an interface with the user. I aimed to achieve a simple yet
-attracting and user-friendly design. I have used ejs templeting engine to acheive the server-side rendering
+attracting and user-friendly design. I have used ejs templeting engine to acheive the server-side rendering.
 
-The backend uses Node JS, Express JS to create a server and uses 'request', a simple Node.js module  for http call, to communicate with the OpenWeatherMap Api
+The backend uses Node JS, Express JS to create a server and uses 'request', a simple Node.js module  for http call, to communicate with the OpenWeatherMap Api.
 
-### Running Application URL
- ```
- https://young-lowlands-57584.herokuapp.com
- ```    
-
+The running application can be accessed [`here`](https://young-lowlands-57584.herokuapp.com)
 
 ### Future improvements
 I'd like to keep expanding this project to hone my existing skills, as well as
