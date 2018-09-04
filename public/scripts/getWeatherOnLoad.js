@@ -1,9 +1,9 @@
-const city = document.querySelector(".city");
-const temperature = document.querySelector(".temperature");
-const description = document.querySelector(".description");
-const currentCityText = document.querySelector(".current-city-text");
-
 document.addEventListener("DOMContentLoaded", function() {
+  const city = document.querySelector(".city");
+  const temperature = document.querySelector(".temperature");
+  const description = document.querySelector(".description");
+  const currentCityText = document.querySelector(".current-city-text");
+
   if (window.navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       const apiKey = `09b24da1e0a717371cbf564329e8a449`;
