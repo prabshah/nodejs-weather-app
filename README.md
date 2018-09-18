@@ -27,7 +27,7 @@ With this application, users can:
 The frontend serves as an interface with the user. I aimed to achieve a simple yet
 attractive design while keeping the user experience as the highest prority. I have used `Express.js` and `ejs` templeting engine to acheive the server-side rendering.
 
-The backend uses Node.js to create a server and uses a simple Node.js module called `request` for http calls to communicate with the OpenWeatherMap Api.
+The backend uses Node.js to create a server and uses a simple Node.js module called `request` for making http calls to communicate with the OpenWeatherMap Api.
 
 The running application can be accessed [`here`](https://young-lowlands-57584.herokuapp.com)
 
