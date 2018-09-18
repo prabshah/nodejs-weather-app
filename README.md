@@ -25,7 +25,7 @@ With this application, users can:
 
 ### Application architecture
 The frontend serves as an interface with the user. I aimed to achieve a simple yet
-attracting and user-friendly design. I have used ejs templeting engine to acheive the server-side rendering.
+attractive design while keeping the user experience as the highest prority. I have used `Express.js` and `ejs` templeting engine to acheive the server-side rendering.
 
 The backend uses Node.js to create a server and uses a simple Node.js module called `request` for http calls to communicate with the OpenWeatherMap Api.
 
