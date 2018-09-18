@@ -1,4 +1,4 @@
-## JavaScript, NodeJS Weather App
+## JavaScript, Node.js Weather App
 
 ## Instructions
 
