@@ -21,13 +21,13 @@ With this application, users can:
 
 ### Main frameworks and libraries
 - Frontend: HTML, CSS, JavaScript
-- Backend: Node.js, Express
+- Backend: Node.js, Express.js
 
 ### Application architecture
 The frontend serves as an interface with the user. I aimed to achieve a simple yet
 attracting and user-friendly design. I have used ejs templeting engine to acheive the server-side rendering.
 
-The backend uses Node JS, Express JS to create a server and uses 'request', a simple Node.js module  for http call, to communicate with the OpenWeatherMap Api.
+The backend uses Node.js to create a server and uses a simple Node.js module called 'request' for http calls to communicate with the OpenWeatherMap Api.
 
 The running application can be accessed [`here`](https://young-lowlands-57584.herokuapp.com)
 
