@@ -13,7 +13,7 @@
 
 ### Features
 With the time given, I have chosen a combination of features and decided on how
-the MVP should look like. I then followed agile development approach to develop the application.
+the structure of the application should look like. I then followed agile development approach to develop the application.
 
 With this application, users can:
 - get the weather of their current city.
